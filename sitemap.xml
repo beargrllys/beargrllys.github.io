@@ -3,16 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://beargrllys.github.io/</loc>
-    <lastmod>2022-10-03T16:01:46+09:00</lastmod>
+    <lastmod>2022-10-03T22:50:08+09:00</lastmod>
+  </url><url>
+    <loc>https://beargrllys.github.io/tags/project/</loc>
+    <lastmod>2022-10-03T22:50:08+09:00</lastmod>
+  </url><url>
+    <loc>https://beargrllys.github.io/project/</loc>
+    <lastmod>2022-10-03T22:50:08+09:00</lastmod>
+  </url><url>
+    <loc>https://beargrllys.github.io/tags/</loc>
+    <lastmod>2022-10-03T22:50:08+09:00</lastmod>
+  </url><url>
+    <loc>https://beargrllys.github.io/project/dreamcube/</loc>
+    <lastmod>2022-10-03T22:50:08+09:00</lastmod>
+  </url><url>
+    <loc>https://beargrllys.github.io/project/depthgame/</loc>
+    <lastmod>2022-10-03T22:50:01+09:00</lastmod>
   </url><url>
     <loc>https://beargrllys.github.io/posts/</loc>
     <lastmod>2022-10-03T16:01:46+09:00</lastmod>
   </url><url>
-    <loc>https://beargrllys.github.io/posts/profile/</loc>
+    <loc>https://beargrllys.github.io/posts/profiles/</loc>
     <lastmod>2022-10-03T16:01:46+09:00</lastmod>
   </url><url>
     <loc>https://beargrllys.github.io/categories/</loc>
   </url><url>
-    <loc>https://beargrllys.github.io/tags/</loc>
+    <loc>https://beargrllys.github.io/projects/</loc>
   </url>
 </urlset>

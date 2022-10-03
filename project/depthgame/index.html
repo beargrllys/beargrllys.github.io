@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>DepthGame | Multitab&#39;s Portfolio</title>
+<meta name="keywords" content="project">
+<meta name="description" content="개요 Kinect V2를 이용해 제작한 실감형 미니게임 콘텐츠 개발
+기본정보 개발인원 / 기간 3명(기획1, 개발1, 디자인1) / 21.10~21.12(3개월) 개발 환경 Unity3D, Kinect V2 SDK, Window 기능 Unity3D 시스템 / Body Tracking / Kinect 디바이스 연동 / Firebase를 이용한 랭크 시스템 역할 / 기여도 메인 개발자 / 40% 개발 목적 교내 프로젝트, GGC 게임컨테스트 출품용 아이디어 기획자와 디자이너와 브레인스토밍을 통해 미니게임 모음집 아이디어로 의견을 모으고 구현가능한 다양한 게임들을 기획했습니다. 이후 개발난이도를 분류하고 1주 1게임을 목표로 기한 내에 최대한 많은 게임이 확보되도록 계획을 수립했습니다.">
+<meta name="author" content="Multitab">
+<link rel="canonical" href="https://beargrllys.github.io/project/depthgame/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://beargrllys.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://beargrllys.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://beargrllys.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://beargrllys.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://beargrllys.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="DepthGame" />
+<meta property="og:description" content="개요 Kinect V2를 이용해 제작한 실감형 미니게임 콘텐츠 개발
+기본정보 개발인원 / 기간 3명(기획1, 개발1, 디자인1) / 21.10~21.12(3개월) 개발 환경 Unity3D, Kinect V2 SDK, Window 기능 Unity3D 시스템 / Body Tracking / Kinect 디바이스 연동 / Firebase를 이용한 랭크 시스템 역할 / 기여도 메인 개발자 / 40% 개발 목적 교내 프로젝트, GGC 게임컨테스트 출품용 아이디어 기획자와 디자이너와 브레인스토밍을 통해 미니게임 모음집 아이디어로 의견을 모으고 구현가능한 다양한 게임들을 기획했습니다. 이후 개발난이도를 분류하고 1주 1게임을 목표로 기한 내에 최대한 많은 게임이 확보되도록 계획을 수립했습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://beargrllys.github.io/project/depthgame/" /><meta property="article:section" content="project" />
+<meta property="article:published_time" content="2022-10-03T22:50:01+09:00" />
+<meta property="article:modified_time" content="2022-10-03T22:50:01+09:00" /><meta property="og:site_name" content="Multitab&#39;s Portfolio" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DepthGame"/>
+<meta name="twitter:description" content="개요 Kinect V2를 이용해 제작한 실감형 미니게임 콘텐츠 개발
+기본정보 개발인원 / 기간 3명(기획1, 개발1, 디자인1) / 21.10~21.12(3개월) 개발 환경 Unity3D, Kinect V2 SDK, Window 기능 Unity3D 시스템 / Body Tracking / Kinect 디바이스 연동 / Firebase를 이용한 랭크 시스템 역할 / 기여도 메인 개발자 / 40% 개발 목적 교내 프로젝트, GGC 게임컨테스트 출품용 아이디어 기획자와 디자이너와 브레인스토밍을 통해 미니게임 모음집 아이디어로 의견을 모으고 구현가능한 다양한 게임들을 기획했습니다. 이후 개발난이도를 분류하고 1주 1게임을 목표로 기한 내에 최대한 많은 게임이 확보되도록 계획을 수립했습니다."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://beargrllys.github.io/project/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "DepthGame",
+      "item": "https://beargrllys.github.io/project/depthgame/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "DepthGame",
+  "name": "DepthGame",
+  "description": "개요 Kinect V2를 이용해 제작한 실감형 미니게임 콘텐츠 개발\n기본정보 개발인원 / 기간 3명(기획1, 개발1, 디자인1) / 21.10~21.12(3개월) 개발 환경 Unity3D, Kinect V2 SDK, Window 기능 Unity3D 시스템 / Body Tracking / Kinect 디바이스 연동 / Firebase를 이용한 랭크 시스템 역할 / 기여도 메인 개발자 / 40% 개발 목적 교내 프로젝트, GGC 게임컨테스트 출품용 아이디어 기획자와 디자이너와 브레인스토밍을 통해 미니게임 모음집 아이디어로 의견을 모으고 구현가능한 다양한 게임들을 기획했습니다. 이후 개발난이도를 분류하고 1주 1게임을 목표로 기한 내에 최대한 많은 게임이 확보되도록 계획을 수립했습니다.",
+  "keywords": [
+    "project"
+  ],
+  "articleBody": "개요 Kinect V2를 이용해 제작한 실감형 미니게임 콘텐츠 개발\n기본정보 개발인원 / 기간 3명(기획1, 개발1, 디자인1) / 21.10~21.12(3개월) 개발 환경 Unity3D, Kinect V2 SDK, Window 기능 Unity3D 시스템 / Body Tracking / Kinect 디바이스 연동 / Firebase를 이용한 랭크 시스템 역할 / 기여도 메인 개발자 / 40% 개발 목적 교내 프로젝트, GGC 게임컨테스트 출품용 아이디어 기획자와 디자이너와 브레인스토밍을 통해 미니게임 모음집 아이디어로 의견을 모으고 구현가능한 다양한 게임들을 기획했습니다. 이후 개발난이도를 분류하고 1주 1게임을 목표로 기한 내에 최대한 많은 게임이 확보되도록 계획을 수립했습니다. Github의 Project 기능을 활용해 팀원들의 일정을 관리했습니다.\n주요 결과물 시연영상 : https://www.youtube.com/watch?v=OM-PopWtTVA APK : https://github.com/beargrllys/VirtualReality/releases/tag/Execute_File 소스코드 : https://github.com/beargrllys/DepthGame 주요 코드 Kinect V2를 이용해 제작한 실감형 미니게임 콘텐츠 개발\n3D 트래킹 - 2D UI 해석 코드 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/BodyTracker.cs 게임 시작 코드 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/AnimationController.cs 게임 랜덤 실행 코드 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/GameManage.cs 주먹 피하기 게임 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/AvoidPunch.cs 청기백기 게임 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/FlagGame.cs 무궁화 게임 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/MuGungHwa.cs OX퀴즈 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/OXGame.cs 패널트킥 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/PK.cs 그릇쌓기 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/Plate.cs 스쿼트 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/Squart.cs 랭킹 시스템 : https://github.com/beargrllys/DepthGame/blob/main/Assets/script/Rank.cs ",
+  "wordCount" : "159",
+  "inLanguage": "en",
+  "datePublished": "2022-10-03T22:50:01+09:00",
+  "dateModified": "2022-10-03T22:50:01+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "Multitab"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://beargrllys.github.io/project/depthgame/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Multitab's Portfolio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://beargrllys.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://beargrllys.github.io/" accesskey="h" title="Multitab&#39;s Portfolio (Alt + H)">Multitab&#39;s Portfolio</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://beargrllys.github.io/posts/profiles" title="Profile">
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://beargrllys.github.io/tags/project/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://beargrllys.github.io/tags/company/" title="Company">
+                    <span>Company</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://beargrllys.github.io/tags/price/" title="Price">
+                    <span>Price</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://beargrllys.github.io/tags/social/" title="Social">
+                    <span>Social</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://beargrllys.github.io/tags/class/" title="Class">
+                    <span>Class</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://beargrllys.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://beargrllys.github.io/contact/contacts/" title="Contacts">
+                    <span>Contacts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://beargrllys.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://beargrllys.github.io/project/">Projects</a></div>
+    <h1 class="post-title">
+      DepthGame
+    </h1>
+    <div class="post-meta"><span title='2022-10-03 22:50:01 +0900 KST'>October 3, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Multitab
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#개요">개요</a></li>
+        <li><a href="#기본정보">기본정보</a></li>
+        <li><a href="#아이디어">아이디어</a></li>
+        <li><a href="#주요-결과물">주요 결과물</a></li>
+        <li><a href="#주요-코드">주요 코드</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h3 id="개요">개요<a hidden class="anchor" aria-hidden="true" href="#개요">#</a></h3>
+<p>Kinect V2를 이용해 제작한 실감형 미니게임 콘텐츠 개발</p>
+<h3 id="기본정보">기본정보<a hidden class="anchor" aria-hidden="true" href="#기본정보">#</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>개발인원 / 기간</td>
+<td>3명(기획1, 개발1, 디자인1) / 21.10~21.12(3개월)</td>
+</tr>
+<tr>
+<td>개발 환경</td>
+<td>Unity3D, Kinect V2 SDK, Window</td>
+</tr>
+<tr>
+<td>기능</td>
+<td>Unity3D 시스템 / Body Tracking / Kinect 디바이스 연동 / Firebase를 이용한 랭크 시스템</td>
+</tr>
+<tr>
+<td>역할 / 기여도</td>
+<td>메인 개발자 / 40%</td>
+</tr>
+<tr>
+<td>개발 목적</td>
+<td>교내 프로젝트, GGC 게임컨테스트 출품용</td>
+</tr>
+</tbody>
+</table>
+<h3 id="아이디어">아이디어<a hidden class="anchor" aria-hidden="true" href="#아이디어">#</a></h3>
+<p>기획자와 디자이너와 브레인스토밍을 통해 미니게임 모음집 아이디어로 의견을 모으고 구현가능한 다양한 게임들을 기획했습니다.
+이후 개발난이도를 분류하고 1주 1게임을 목표로 기한 내에 최대한
+많은 게임이 확보되도록 계획을 수립했습니다.
+Github의 Project 기능을 활용해 팀원들의 일정을 관리했습니다.</p>
+<h3 id="주요-결과물">주요 결과물<a hidden class="anchor" aria-hidden="true" href="#주요-결과물">#</a></h3>
+<ul>
+<li>시연영상 : <a href="https://www.youtube.com/watch?v=OM-PopWtTVA">https://www.youtube.com/watch?v=OM-PopWtTVA</a></li>
+<li>APK : <a href="https://github.com/beargrllys/VirtualReality/releases/tag/Execute_File">https://github.com/beargrllys/VirtualReality/releases/tag/Execute_File</a></li>
+<li>소스코드 : <a href="https://github.com/beargrllys/DepthGame">https://github.com/beargrllys/DepthGame</a></li>
+</ul>
+<h3 id="주요-코드">주요 코드<a hidden class="anchor" aria-hidden="true" href="#주요-코드">#</a></h3>
+<p>Kinect V2를 이용해 제작한 실감형 미니게임 콘텐츠 개발</p>
+<ul>
+<li>3D 트래킹 - 2D UI 해석 코드 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/BodyTracker.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/BodyTracker.cs</a></li>
+<li>게임 시작 코드 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/AnimationController.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/AnimationController.cs</a></li>
+<li>게임 랜덤 실행 코드 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/GameManage.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/GameManage.cs</a></li>
+<li>주먹 피하기 게임 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/AvoidPunch.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/AvoidPunch.cs</a></li>
+<li>청기백기 게임 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/FlagGame.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/FlagGame.cs</a></li>
+<li>무궁화 게임 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/MuGungHwa.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/MuGungHwa.cs</a></li>
+<li>OX퀴즈 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/OXGame.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/OXGame.cs</a></li>
+<li>패널트킥 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/PK.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/PK.cs</a></li>
+<li>그릇쌓기 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/Plate.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/Plate.cs</a></li>
+<li>스쿼트 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/Squart.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/Squart.cs</a></li>
+<li>랭킹 시스템 : <a href="https://github.com/beargrllys/DepthGame/blob/main/Assets/script/Rank.cs">https://github.com/beargrllys/DepthGame/blob/main/Assets/script/Rank.cs</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://beargrllys.github.io/tags/project/">project</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://beargrllys.github.io/">Multitab&#39;s Portfolio</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
